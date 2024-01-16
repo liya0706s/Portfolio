@@ -3,7 +3,7 @@ date_default_timezone_set("Asia/Taipei");
 session_start();
 class DB
 {
-    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db_project";
+    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=s1120409";
     // db+抽到的崗位號碼
     // protected $dsn = "mysql:host=localhost;charset=utf8;dbname=bquiz"; 
     // dbname=資料庫名稱
@@ -13,8 +13,8 @@ class DB
     public function __construct($table)
     {
         $this->table = $table;
-        $this->pdo = new PDO($this->dsn, 'root', '');
-        // $this->pdo=new PDO($this->dsn,'s1120409','s1120409');
+        // $this->pdo = new PDO($this->dsn, 'root', '');
+        $this->pdo=new PDO($this->dsn,'s1120409','s1120409');
     }
 
 
